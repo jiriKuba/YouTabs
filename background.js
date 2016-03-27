@@ -15,7 +15,7 @@ chrome.runtime.onMessage.addListener(function(message,sender,sendResponse){
 });
 
 function sendServerRequest(bandSongText) {
-  var tabsCall = "http://www.911tabs.com/search.php?search="+bandSongText;
+  var tabsCall = "http://www.911tabs.com/search.php?search="+encodeURIComponent(bandSongText);
   chrome.tabs.create({url: tabsCall});
 }
 
