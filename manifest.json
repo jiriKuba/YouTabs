@@ -3,7 +3,7 @@
   "name": "YouTabs",
   "author": "Jiri Kuba",
   "description": "This extension will attempt to find music tabs for song in youtube player.",
-  "version": "1.0",
+  "version": "1.1",
   "icons": { 
     "19": "images/icon-19.png",
     "38": "images/icon-38.png",  
