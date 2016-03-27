@@ -1,16 +1,16 @@
 var bandSongName = "";
 function loadBandSongName(callBack){
-
-	tryGetLastRequest();
-
-	tryGetYoutubeTitle(function(textData){
-      if(typeof textData != 'undefined' && textData!= "")
-      	bandSongName = textData;
+	tryGetLastRequest(function(){
+    	//load last but if is youtube page replace text
+		tryGetYoutubeTitle(function(textData){
+        		if(typeof textData != 'undefined' && textData!= "")
+      	 			bandSongName = textData;
       
-      if(typeof callBack !='undefined'){
-  			callBack();
-  		}
-    });
+        		if(typeof callBack !='undefined'){
+  			 	callBack();
+  		  	}
+      		});
+  	});
 }
 
 function searchBtnClick(){
@@ -37,11 +37,12 @@ function tryGetYoutubeTitle(callback){
 
 }
 
-function tryGetLastRequest(){
+function tryGetLastRequest(callback){
 	chrome.runtime.sendMessage({method: "getLastRequest"}, function(response) {
   		if(typeof response !='undefined' && typeof response.data !='undefined'){
-    		setSearchText(response.data);
+    			setSearchText(response.data);
   		}
+  		callback();
 	});
 }
 
