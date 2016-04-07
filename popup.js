@@ -52,15 +52,21 @@ function getSearchText(){
 
 function setSearchText(text){
 	bandSongName = text;
-	document.getElementById('search-textbox').value = text;
+  	var searchTB = document.getElementById('search-textbox');
+	searchTB.value = text;
+  	searchTB.setSelectionRange(0, searchTB.value.length);
 }
 
 function documentReady(){
 	var searchBtn = document.getElementById('search-btn');
-	if(searchBtn !== null)
-	{
+	var searchTB = document.getElementById('search-textbox');
+	if(searchBtn !== null) {
 		searchBtn.addEventListener('click', searchBtnClick, false);
 	}
+	
+	if(searchTB !== null) {
+    		searchTB.focus();
+  	}
 
 	loadBandSongName(function(){
 		setSearchText(bandSongName);
