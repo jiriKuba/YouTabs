@@ -12,10 +12,14 @@ function getSongTitle() {
     var imdbTitle = document.getElementsByClassName(IMDB_TITLE_CLASS);
     var header = imdbTitle[0].getElementsByTagName("h1")[0];
     var wholeText = header.innerText.trim();
-    var year = document.getElementById(IMDB_TITLE_YEAR_ID).innerText;
-    if (wholeText.indexOf(year) > -1) {
-        var result = wholeText.replace(year,'').trim();
-        return result;
+    var yearElement = document.getElementById(IMDB_TITLE_YEAR_ID);
+    if (yearElement !== null) {
+        var year = yearElement.innerText;
+        if (wholeText.indexOf(year) > -1) {
+            var result = wholeText.replace(year, '').trim();
+            return result;
+        }
     }
-    else return wholeText;
+
+    return wholeText;
 }
