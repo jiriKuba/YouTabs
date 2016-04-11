@@ -14,10 +14,14 @@
    "tabs",
    "<all_urls>"
  ],
- "content_scripts": [
+  "content_scripts": [
     {
-      "matches": ["https://www.youtube.com/*"],
-      "js": ["content.js"]
+      "matches": [ "https://www.youtube.com/*" ],
+      "js": [ "content.js", "youtube.content.js" ]
+    },
+    {
+      "matches": [ "http://www.imdb.com/*" ],
+      "js": [ "content.js", "imdb.content.js" ]
     }
   ],
   "browser_action": {

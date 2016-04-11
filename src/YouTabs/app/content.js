@@ -1,5 +1,5 @@
-var bandSongText = "nic";
-var YOUTUBE_TITLE_ID = 'eow-title';
+var bandSongText = "";
+//var YOUTUBE_TITLE_ID = 'eow-title';
 var isReady = false;
 
 chrome.extension.onMessage.addListener(function(msg, sender, sendResponse) {
@@ -15,8 +15,8 @@ function documentReady(){
 }
 
 function loadBandSongText(callBack){
-    if(isThisPageYoutube()){
-        bandSongText = getYoutubeTitle();    
+    if (isThisPageSongDetail()) {
+        bandSongText = getSongTitle();
     }
   
     if(typeof callBack != 'undefined'){
@@ -24,20 +24,20 @@ function loadBandSongText(callBack){
     }
 }
 
-function isThisPageYoutube(){
-    var youtubeTitle = document.getElementById(YOUTUBE_TITLE_ID);
-    return (youtubeTitle !== null);
-}
+//function isThisPageSongDetail(){
+//    var youtubeTitle = document.getElementById(YOUTUBE_TITLE_ID);
+//    return (youtubeTitle !== null);
+//}
 
-function getYoutubeTitle(){
-    var youtubeTitle = document.getElementById(YOUTUBE_TITLE_ID);
-    if(youtubeTitle !== null){
-        return youtubeTitle.innerText;
-    }
-    else{
-        return "";
-    }
-}
+//function getSongTitle(){
+//    var youtubeTitle = document.getElementById(YOUTUBE_TITLE_ID);
+//    if(youtubeTitle !== null){
+//        return youtubeTitle.innerText;
+//    }
+//    else{
+//        return "";
+//    }
+//}
 
 //window.onload = documentReady;
 document.addEventListener('DOMContentLoaded', documentReady, false);

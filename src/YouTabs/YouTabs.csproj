@@ -44,8 +44,10 @@
     <Content Include="app\images\icon-128.png" />
     <Content Include="app\images\icon-19.png" />
     <Content Include="app\images\icon-38.png" />
+    <Content Include="app\imdb.content.js" />
     <Content Include="app\popup.html" />
     <Content Include="app\popup.js" />
+    <Content Include="app\youtube.content.js" />
     <Content Include="Properties\build\lib\Ionic.Zip.DLL" />
     <Content Include="Properties\build\lib\MSBuild.ExtensionPack.dll" />
     <Content Include="screenshots\screenshot.png" />
