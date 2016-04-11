@@ -3,7 +3,7 @@
   "name": "YouTabs",
   "short_name": "YouTabs",
   "author": "Jiri Kuba",
-  "description": "This extension will attempt to find music tabs for song in youtube player.",
+  "description": "This extension will attempt to find guitar tabs for song in youtube player.",
   "version": "1.3",
   "icons": { 
     "19": "images/icon-19.png",
@@ -22,6 +22,10 @@
     {
       "matches": [ "http://www.imdb.com/*" ],
       "js": [ "content.js", "imdb.content.js" ]
+    },
+    {
+      "matches": [ "http://www.csfd.cz/*" ],
+      "js": [ "content.js", "csfd.content.js" ]
     }
   ],
   "browser_action": {

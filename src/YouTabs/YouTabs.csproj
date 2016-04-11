@@ -41,6 +41,7 @@
   <ItemGroup>
     <Content Include="app\background.js" />
     <Content Include="app\content.js" />
+    <Content Include="app\csfd.content.js" />
     <Content Include="app\images\icon-128.png" />
     <Content Include="app\images\icon-19.png" />
     <Content Include="app\images\icon-38.png" />
