@@ -61,14 +61,15 @@ function setSearchText(text){
 
 function documentReady(){
 	var searchBtn = document.getElementById('search-btn');
-  var searchTB = document.getElementById('search-textbox');
+	var searchTB = document.getElementById('search-textbox');
+
 	if(searchBtn !== null) {
 		searchBtn.addEventListener('click', searchBtnClick, false);
 	}
 
-  if(searchTB !== null) {
-    searchTB.focus();
-  }
+    if(searchTB !== null) {
+        searchTB.focus();
+    }
 
 	loadBandSongName(function(){
 		setSearchText(bandSongName);    
