@@ -39,9 +39,5 @@ function getYoutubeTitle(){
     }
 }
 
-function isTextVariableSet(text){
-    return (typeof text != 'undefined' && text != "");
-}
-
 //window.onload = documentReady;
 document.addEventListener('DOMContentLoaded', documentReady, false);
