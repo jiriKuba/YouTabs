@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "name": "YouTabs",
+  "short_name": "YouTabs",
+  "author": "Jiri Kuba",
+  "description": "This extension will attempt to find music tabs for song in youtube player.",
+  "version": "1.2",
+  "icons": { 
+    "19": "images/icon-19.png",
+    "38": "images/icon-38.png",  
+    "128": "images/icon-128.png"  
+          },
+  "permissions": [
+   "tabs",
+   "<all_urls>"
+ ],
+ "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": {  
+            "19": "images/icon-19.png",
+            "38": "images/icon-38.png",  
+            "128": "images/icon-128.png"         
+          },
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
+}
