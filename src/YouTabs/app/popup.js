@@ -27,8 +27,11 @@ function tryGetYoutubeTitle(callback){
         var callRefer = callback;
         chrome.tabs.sendMessage(tabs[0].id, {action: "getBandAndSong"}, function(response){
 
-            if(typeof callRefer != 'undefined'){
-                callRefer(response.data);
+            if (typeof callRefer != 'undefined') {
+                if (typeof response != 'undefined' && typeof response.data != 'undefined')
+                    callRefer(response.data);
+                else
+                    callRefer();
             }
         });  
     });
