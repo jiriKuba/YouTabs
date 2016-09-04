@@ -2,7 +2,7 @@ var bandSongText = "";
 //var YOUTUBE_TITLE_ID = 'eow-title';
 var isReady = false;
 
-chrome.extension.onMessage.addListener(function(msg, sender, sendResponse) {
+chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
     if (msg.action === 'getBandAndSong') {
         loadBandSongText(function(){
             sendResponse({ data: bandSongText });

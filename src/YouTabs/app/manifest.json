@@ -16,15 +16,15 @@
   ],
   "content_scripts": [
     {
-      "matches": [ "https://www.youtube.com/*" ],
+      "matches": [ "*://*.youtube.com/*" ],
       "js": [ "content.js", "youtube.content.js" ]
     },
     {
-      "matches": [ "http://www.imdb.com/*" ],
+      "matches": [ "*://*.imdb.com/*" ],
       "js": [ "content.js", "imdb.content.js" ]
     },
     {
-      "matches": [ "http://www.csfd.cz/*" ],
+      "matches": [ "*://*.csfd.cz/*" ],
       "js": [ "content.js", "csfd.content.js" ]
     }
   ],
