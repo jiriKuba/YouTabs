@@ -1,10 +1,10 @@
-﻿var YOUTUBE_TITLE_ID = 'eow-title';
+﻿var YOUTUBE_TITLE_CLASS = 'title ytd-video-primary-info-renderer';
 function isThisPageSongDetail() {
-    var youtubeTitle = document.getElementById(YOUTUBE_TITLE_ID);
-    return (youtubeTitle !== null);
+    var youtubeTitle = document.getElementsByClassName(YOUTUBE_TITLE_CLASS);
+    return (youtubeTitle && youtubeTitle.length > 0);
 }
 
 function getSongTitle() {
-    var youtubeTitle = document.getElementById(YOUTUBE_TITLE_ID);
-    return youtubeTitle.innerText;
+    var youtubeTitle = document.getElementsByClassName(YOUTUBE_TITLE_CLASS);
+    return youtubeTitle[0].innerText;
 }
