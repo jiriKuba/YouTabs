@@ -4,7 +4,7 @@
   "short_name": "YouTabs",
   "author": "Jiri Kuba",
   "description": "This extension is search bar for searching guitar tabs on 911tabs. On supported sites extension will prefill song name for search.",
-  "version": "1.4",
+  "version": "1.5",
   "icons": {
     "19": "images/icon-19.png",
     "38": "images/icon-38.png",
